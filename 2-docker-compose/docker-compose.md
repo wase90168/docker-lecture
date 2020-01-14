@@ -6,21 +6,21 @@ ACHTUNG: Für die Einrückungen im YML-File nur Leerzeichen (Keine Tabs) verwend
   
 Das zu erstellende Docker-Compose.yml-File muss folgende Schritte ausführen:  
 1. Service 1: sysad-mysql  
-..* Zu verwendendes Image: mysql - Version 5.7  
-..* Folgende Environmentvariable muss gesetzt werden (exakte Schreibweise mit "):  
+  * Zu verwendendes Image: mysql - Version 5.7  
+  * Folgende Environmentvariable muss gesetzt werden (exakte Schreibweise mit "):  
 ```
 "MYSQL_ROOT_PASSWORD=X4d7vOyAljyz0wFYbpdOoeXQuHK1Ee"
 ```
-..* Folgendes Volume muss für den Container freigegeben werden:  
+  * Folgendes Volume muss für den Container freigegeben werden:  
 ```
 /opt/sysad/mysql-data:/var/lib/mysql
 ```
-..* Die folgenden Zeilen können so belassen werden.  
+  * Die folgenden Zeilen können so belassen werden.  
 2. Service 2: sysad-crud  
-..* Zu verwendendes Image: wase90168/sysad-crud  
-..* Der Port 80 muss für den Container freigegeben werden.  
-..* Link zum ersten Service (sysad-mysql) muss hergestellt werden.  
-..* Die folgenden Zeilen können so belassen werden.  
+  * Zu verwendendes Image: wase90168/sysad-crud  
+  * Der Port 80 muss für den Container freigegeben werden.  
+  * Link zum ersten Service (sysad-mysql) muss hergestellt werden.  
+  * Die folgenden Zeilen können so belassen werden.  
   
 Zum starten des Builds wird folgender Befehl verwendet:  
 ```

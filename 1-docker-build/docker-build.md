@@ -10,8 +10,8 @@ Das zu erstellende Dockerfile muss folgende Schritte ausführen:
 * Folgende Environment-Variable muss für den erstellten Ordner gesetzt werden: DOCKERFILES="/dockerfiles"  
 * Die Dateien vom Host unter "./src/" müssen in den Ordner /dockerfiles kopiert werden  
 * Ganz am Ende müssen folgende Befehle ausgeführt werden um den Webserver-Container zu initialisieren:  
-..* chmod +x $DOCKERFILES/*.sh;  
-..* $DOCKERFILES/initialize-container.sh  
+  * chmod +x $DOCKERFILES/*.sh;  
+  * $DOCKERFILES/initialize-container.sh  
   
 Zum starten des Builds wird folgender Befehl verwendet:  
 ```
