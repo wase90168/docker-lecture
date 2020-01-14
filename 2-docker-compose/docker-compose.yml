@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+    sysad-mysql:
+
+
+
+
+
+        container_name: sysad-mysql
+        restart: always
+    
+    sysad-apache2:
+
+
+
+
+
+        container_name: sysad-crud
+        restart: always
+        stdin_open: true
+        tty: true

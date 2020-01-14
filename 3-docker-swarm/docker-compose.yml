@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  hello:
+    image: wase90168/sysad-swarm
+    deploy:
+      replicas: 5
+    ports:
+      - 80:3000
+  visualizer:
+    image: dockersamples/visualizer
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+    ports:
+      - 8080:8080
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
