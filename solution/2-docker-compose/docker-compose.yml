@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+    sysad-mysql:
+        image: mysql:5.7
+        environment:
+         - "MYSQL_ROOT_PASSWORD=X4d7vOyAljyz0wFYbpdOoeXQuHK1Ee"
+        container_name: sysad-mysql
+        restart: always
+    sysad-apache2:
+        image: sysad-crud
+        ports:
+         - "80:80"
+        links:
+         - "sysad-mysql"
+        container_name: sysad-crud
+        restart: always
+        stdin_open: true
+        tty: true
